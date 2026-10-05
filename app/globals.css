@@ -1,0 +1,181 @@
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(115deg, #172647 0%, #233b6e 100%);
+  color: #eff0f4;
+}
+
+main {
+  width: min(560px, 100%);
+  padding: 2rem 1.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  margin: 0 0 1.35rem;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.mark {
+  width: 4.6rem;
+  height: 4.6rem;
+  flex: none;
+}
+
+.wordmark {
+  font-weight: 800;
+  font-size: 3.35rem;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: #eff0f4;
+}
+
+.lede {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 600;
+  color: #d3d6db;
+  text-align: center;
+  margin: 0 0 1.5rem;
+}
+
+form {
+  margin: 0;
+}
+
+label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: #eff0f2;
+}
+
+.row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input,
+button {
+  font: inherit;
+  border-radius: 8px;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.65rem 0.75rem;
+  color: #eff0f4;
+  background: #172647;
+  border: 1px solid #2f5095;
+}
+
+input::placeholder {
+  color: #d3d6db;
+}
+
+button {
+  padding: 0.65rem 0.95rem;
+  cursor: pointer;
+  font-weight: 700;
+  color: #172647;
+  background: #eff0f2;
+  border: 1px solid #eff0f2;
+}
+
+button:hover {
+  background: #d3d6db;
+  border-color: #d3d6db;
+}
+
+:focus-visible {
+  outline: 2px solid #eff0f4;
+  outline-offset: 2px;
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.75rem 0 0;
+}
+
+.suggestions button {
+  background: transparent;
+  color: #eff0f4;
+  border-color: #2f5095;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.suggestions button:hover {
+  background: #2f5095;
+  border-color: #2f5095;
+  color: #eff0f4;
+}
+
+.agent {
+  margin-top: 1.25rem;
+  min-height: 4.5rem;
+}
+
+.steps {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #d3d6db;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.answer {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-weight: 600;
+  margin: 0.8rem 0 0;
+  color: #eff0f2;
+}
+
+.action {
+  margin: 0.8rem 0 0;
+}
+
+a {
+  color: #eff0f4;
+  font-weight: 700;
+}
+
+.channel {
+  text-align: center;
+  margin: 1.75rem 0 0;
+}
+
+@media (max-width: 520px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .mark {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .wordmark {
+    font-size: 2.45rem;
+  }
+}
