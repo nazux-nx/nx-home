@@ -84,12 +84,14 @@
   {
     "id": "about",
     "title": "What Nazux is",
+    "choice": "what Nazux is",
     "keys": ["nazux", "who are you", "what is this", "what are you", "about you"],
     "answer": "Nazux gives plain explainers for remote workers who want a calmer home office. Ask for one, or watch them on YouTube."
   },
   {
     "id": "watch",
     "title": "YouTube channel",
+    "choice": "the YouTube channel",
     "keys": ["youtube", "channel", "video", "watch"],
     "answer": "The explainers are on the Nazux YouTube channel.",
     "action": { "label": "Open the channel", "href": "https://www.youtube.com/@Nazux-n5e" }
@@ -97,24 +99,28 @@
   {
     "id": "reset",
     "title": "Sunday reset",
+    "choice": "the Sunday reset",
     "keys": ["sunday", "reset", "next week", "monday"],
     "answer": "Close one week before you start the next. Clear the desk, write down the three things that matter, and leave Monday a smaller pile."
   },
   {
     "id": "desk",
     "title": "Quieter desk",
+    "choice": "the quieter desk",
     "keys": ["desk", "chair", "workspace", "setup", "clutter"],
     "answer": "Keep the desk for the task in front of you. Everything else goes where you can reach it without searching. If you can reset the surface in a minute, it is quiet enough."
   },
   {
     "id": "shutdown",
     "title": "End the day",
+    "choice": "the end of the day",
     "keys": ["end the day", "shutdown", "log off", "sign off", "evening", "done for the day", "work day"],
     "answer": "Stop on purpose. Note where you left off, close the extra tabs, and choose the first thing for tomorrow. Then leave the work where it is."
   },
   {
     "id": "focus",
     "title": "A short focus block",
+    "choice": "a short focus block",
     "keys": ["focus", "distract", "notification", "deep work", "concentrate"],
     "answer": "Choose one task and quiet the rest for a short block. When the block ends, stand up. The calm is in the stopping, not in a longer day."
   }
@@ -183,7 +189,7 @@
     var action = explainer.action || { label: "Watch on YouTube", href: CHANNEL };
     var trace = [
       "Read the request.",
-      "Chose the " + explainer.title.toLowerCase() + " explainer."
+      "Chose " + explainer.choice + "."
     ];
     if (explainer.action && wantsNavigation(normalized)) {
       trace.push("Open the channel.");
