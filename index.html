@@ -186,12 +186,12 @@
         action: { label: "Open the channel", href: CHANNEL }
       };
     }
-    var action = explainer.action || { label: "Watch on YouTube", href: CHANNEL };
+    var action = explainer.action || null;
     var trace = [
       "Read the request.",
-      "Chose " + explainer.choice + "."
+      "Picked " + explainer.choice + "."
     ];
-    if (explainer.action && wantsNavigation(normalized)) {
+    if (action && wantsNavigation(normalized)) {
       trace.push("Open the channel.");
     } else {
       trace.push("Answer in plain language.");
@@ -200,7 +200,7 @@
       steps: trace,
       answer: explainer.answer,
       action: action,
-      navigate: Boolean(explainer.action && wantsNavigation(normalized))
+      navigate: Boolean(action && wantsNavigation(normalized))
     };
   }
 
